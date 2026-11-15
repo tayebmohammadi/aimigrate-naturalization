@@ -1,0 +1,45 @@
+{
+  "check": "Stage 6 one-case Streamlit end-to-end smoke; not part of fixed evaluation",
+  "question": "What is the overall purpose of the administrative naturalization ceremony according to USCIS?",
+  "retrieval_method": "MiniLM",
+  "status": "answered",
+  "generation_seconds": 73.3988559099962,
+  "app_test_wall_seconds": 85.93362150799658,
+  "generator_instances": 1,
+  "generation_calls": 1,
+  "displayed_expected_status": true,
+  "method_change_cleared_answer": true,
+  "question_edit_cleared_answer": true,
+  "evidence": [
+    {
+      "citation_id": "[S1]",
+      "doc_id": "doc-cc2645457c16",
+      "passage_id": "doc-cc2645457c16-p-b417d74faec7746f5e47",
+      "title": "Chapter 5 - Administrative Naturalization Ceremonies",
+      "url": "https://www.uscis.gov/policy-manual/volume-12-part-j-chapter-5",
+      "text": "Chapter 5 - Administrative Naturalization Ceremonies\n\nUSCIS is committed to elevating the importance of the naturalization ceremony as a venue to recognize the rights, responsibilities, and importance of citizenship and provide access to services for newly naturalized citizens. The naturalization ceremony is the culmination of the naturalization process. USCIS aims to make administrative naturalization ceremonies positive and memorable moments in the lives of the participants. USCIS honors the Oath of Allegiance with policies and practices that reflect the importance of the occasion.\nThe following information provides USCIS officials with guidance for conducting administrative naturalization ceremonies in a meaningful and consistent manner.\n[1]\nA. Ceremony Check-In Process\nUSCIS personnel perform the ceremony check-in process before the start of the ceremony. An officer reviews the responses on each alien’s Notice of Naturalization Oath Ceremony (Form N-445) and updates responses as necessary. Once the"
+    },
+    {
+      "citation_id": "[S2]",
+      "doc_id": "doc-047e09f13754",
+      "passage_id": "doc-047e09f13754-p-b3c0489aa29b4fb93a0e",
+      "title": "Chapter 3 - USCIS Authority to Naturalize",
+      "url": "https://www.uscis.gov/policy-manual/volume-12-part-a-chapter-3",
+      "text": "Chapter 3 - USCIS Authority to Naturalize\n\nIt has long been established that Congress has the exclusive authority under its constitutional power to establish a uniform rule of naturalization and to enact legislation under which citizenship may be conferred upon persons.\n[1]\nBefore 1991, naturalization within the United States was a judicial function exercised since 1790 by various courts designated in statutes enacted by Congress under its constitutional power to establish a uniform rule of naturalization.\n\nAs of October 1, 1991, Congress transferred the naturalization authority to the Attorney General (now the Secretary of DHS).\n[2]\nUSCIS is authorized to perform such acts as are necessary to properly implement the Secretary’s authority.\n[3]\nIn certain cases, an applicant for naturalization may choose to have the Oath of Allegiance\n[4]\nadministered by USCIS or by an eligible court with jurisdiction. Eligible courts may choose to have exclusive authority to"
+    },
+    {
+      "citation_id": "[S3]",
+      "doc_id": "doc-6afa448abbc0",
+      "passage_id": "doc-6afa448abbc0-p-579dfd7f3cd658043a40",
+      "title": "Chapter 1 - Purpose and Background",
+      "url": "https://www.uscis.gov/policy-manual/volume-12-part-j-chapter-1",
+      "text": "Chapter 1 - Purpose and Background\n\nA. Purpose\nBefore becoming a U.S. citizen, an alien eligible for naturalization must take an oath of renunciation and allegiance (Oath of Allegiance) in a public ceremony.\n[1]\nThe Oath of Allegiance is the culmination of the naturalization process and a crucial act highlighting the transition from immigrant to U.S. citizen. The oath serves as a formal declaration of loyalty and commitment to the United States, its Constitution, and laws.\nDuring the naturalization interview, the alien signs the naturalization application to acknowledge his or her willingness and ability to take the Oath of Allegiance and to accept certain obligations of United States citizenship. The alien must establish that it is his or her intention, in good faith, to assume and discharge the obligations of the Oath of Allegiance.\n[2]\nThe alien must also establish that his or her attitude toward the Constitution and"
+    }
+  ],
+  "raw_response": "{\"status\":\"answer\",\"answer\":\"The overall purpose of the administrative naturalization ceremony is to recognize the rights, responsibilities, and importance of citizenship, provide access to services for newly naturalized citizens, and honor the Oath of Allegiance with policies and practices that reflect the importance of the occasion.\", \"citations\":[\"[S1]\"],\"quote\":\"A. Ceremony Check-In Process\\nUSCIS personnel perform the ceremony check-in process before the start of the ceremony. An officer reviews the responses on each alien’s Notice of Naturalization Oath Ceremony (Form N-445) and updates responses as necessary. Once the\"}",
+  "displayed_answer": "The overall purpose of the administrative naturalization ceremony is to recognize the rights, responsibilities, and importance of citizenship, provide access to services for newly naturalized citizens, and honor the Oath of Allegiance with policies and practices that reflect the importance of the occasion.",
+  "validation_error": "",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "runtime_note": "Generation runtime is AnswerGenerator.answer runtime; AppTest wall includes UI work."
+}

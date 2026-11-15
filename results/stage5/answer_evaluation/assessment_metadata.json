@@ -1,0 +1,15 @@
+{
+  "reviewer": "OpenAI Codex (coding assistant)",
+  "review_date": "2026-11-15",
+  "source_records": "results/stage5/collection/records/*.json",
+  "protocol": "results/stage5/ASSESSMENT_PROTOCOL.md",
+  "reference_review": "results/stage5/final_reference_verification_2026-11-15/FINAL_VERIFICATION.md",
+  "reviewed_records": 50,
+  "qwen_rerun": false,
+  "frozen_configuration_changed": false,
+  "student_ratings_file_changed": false,
+  "scope": "Assistant content assessment of saved responses; ratings apply to displayed substantive drafts; rejected raw text is diagnostic only.",
+  "rating_scale": "Protocol dimensions: 0/1/2. N/A for abstentions and outputs not displayed because validation failed. Sentence count is recorded separately.",
+  "configuration_fingerprint": "95a7d8e08286c0b3dfed33c12f74a8f0f5832a1aea9f43f45d81a1d2de77cb60",
+  "frozen_response_export_sha256": "6f9524477ce994c75e10bfe9174d9d56e8b53cc8913d07c2afdbf9f34a48cd6c"
+}

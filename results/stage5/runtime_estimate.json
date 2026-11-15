@@ -1,0 +1,21 @@
+{
+  "planned_in_scope_questions": 20,
+  "additional_out_of_scope_questions": 5,
+  "methods": [
+    "bm25",
+    "minilm"
+  ],
+  "planned_generations": 50,
+  "in_scope_generations": 40,
+  "out_of_scope_generations": 10,
+  "saved_direct_in_scope_mean_seconds": 50.61067845499929,
+  "saved_direct_out_of_scope_mean_seconds": 19.880042553999374,
+  "direct_estimated_minutes": 37.05379272899942,
+  "app_based_estimated_minutes": 51.67277861332938,
+  "model_load_seconds_reference": 11.9,
+  "planning_range_minutes": [
+    40,
+    65
+  ],
+  "caveat": "Estimate, not a bound; harder/longer responses or memory pressure can take longer. Cache generator once, no batch started."
+}

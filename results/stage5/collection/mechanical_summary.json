@@ -1,0 +1,116 @@
+{
+  "configuration_fingerprint": "95a7d8e08286c0b3dfed33c12f74a8f0f5832a1aea9f43f45d81a1d2de77cb60",
+  "expected_pairs": 50,
+  "saved_pairs": 50,
+  "all_expected_pairs_saved": true,
+  "nonempty_raw_responses": 50,
+  "methods": [
+    {
+      "method": "bm25",
+      "question_type": "all",
+      "completed": 25,
+      "in_scope": 20,
+      "out_of_scope": 5,
+      "parsed_answers": 8,
+      "model_abstentions": 11,
+      "validation_failures": 6,
+      "execution_failures": 0,
+      "mean_generation_seconds": 46.84890439384006,
+      "median_generation_seconds": 47.12822360100108,
+      "timing_n": 25
+    },
+    {
+      "method": "minilm",
+      "question_type": "all",
+      "completed": 25,
+      "in_scope": 20,
+      "out_of_scope": 5,
+      "parsed_answers": 5,
+      "model_abstentions": 8,
+      "validation_failures": 12,
+      "execution_failures": 0,
+      "mean_generation_seconds": 50.25958582780004,
+      "median_generation_seconds": 47.69716676600365,
+      "timing_n": 25
+    }
+  ],
+  "by_question_type": [
+    {
+      "method": "bm25",
+      "question_type": "in_scope",
+      "completed": 20,
+      "in_scope": 20,
+      "out_of_scope": 0,
+      "parsed_answers": 8,
+      "model_abstentions": 6,
+      "validation_failures": 6,
+      "execution_failures": 0,
+      "mean_generation_seconds": 49.065928969800005,
+      "median_generation_seconds": 47.77556608550003,
+      "timing_n": 20
+    },
+    {
+      "method": "bm25",
+      "question_type": "out_of_scope",
+      "completed": 5,
+      "in_scope": 0,
+      "out_of_scope": 5,
+      "parsed_answers": 0,
+      "model_abstentions": 5,
+      "validation_failures": 0,
+      "execution_failures": 0,
+      "mean_generation_seconds": 37.98080609000026,
+      "median_generation_seconds": 20.59141023599659,
+      "timing_n": 5
+    },
+    {
+      "method": "minilm",
+      "question_type": "in_scope",
+      "completed": 20,
+      "in_scope": 20,
+      "out_of_scope": 0,
+      "parsed_answers": 5,
+      "model_abstentions": 3,
+      "validation_failures": 12,
+      "execution_failures": 0,
+      "mean_generation_seconds": 56.323842301300466,
+      "median_generation_seconds": 50.12909175299865,
+      "timing_n": 20
+    },
+    {
+      "method": "minilm",
+      "question_type": "out_of_scope",
+      "completed": 5,
+      "in_scope": 0,
+      "out_of_scope": 5,
+      "parsed_answers": 0,
+      "model_abstentions": 5,
+      "validation_failures": 0,
+      "execution_failures": 0,
+      "mean_generation_seconds": 26.00255993379833,
+      "median_generation_seconds": 24.521586946000753,
+      "timing_n": 5
+    }
+  ],
+  "validation_failure_breakdown": {
+    "bm25": {
+      "invalid_citation": 0,
+      "invalid_evidence_quote": 2,
+      "malformed_output": 4
+    },
+    "minilm": {
+      "invalid_citation": 0,
+      "invalid_evidence_quote": 3,
+      "malformed_output": 9
+    }
+  },
+  "model_load_events": 1,
+  "generation_started_events": 50,
+  "slow_call_inspections": [],
+  "interruptions": [],
+  "checkpoint_skips_during_generation": 0,
+  "collection_session_seconds": 2455.0791651409963,
+  "timing_definition": "AnswerGenerator.answer wall time includes preparation/tokenization plus generation; excludes model load and retrieval. Raised calls use elapsed attempted call time; pre-generation failures have null timing.",
+  "quality_ratings": "pending; answered denotes application-check success only",
+  "responses_sha256": "6f9524477ce994c75e10bfe9174d9d56e8b53cc8913d07c2afdbf9f34a48cd6c"
+}

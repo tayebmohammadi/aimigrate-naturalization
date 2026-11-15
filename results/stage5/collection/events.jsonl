@@ -1,0 +1,103 @@
+{"time_utc": "2026-11-14T21:11:18.035999+00:00", "event": "session_started", "pid": 46034, "resumed_completed": 0, "fingerprint": "95a7d8e08286c0b3dfed33c12f74a8f0f5832a1aea9f43f45d81a1d2de77cb60"}
+{"time_utc": "2026-11-14T21:11:37.939881+00:00", "event": "model_loaded", "pid": 46034, "model": "Qwen/Qwen2.5-1.5B-Instruct", "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306", "load_seconds": 13.167356990998087}
+{"time_utc": "2026-11-14T21:11:38.133285+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-1c9ac2bdd353__bm25"}
+{"time_utc": "2026-11-14T21:12:08.791692+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-1c9ac2bdd353__bm25", "completed": 1, "status": "abstained", "generation_seconds": 30.65365526599635}
+{"time_utc": "2026-11-14T21:12:09.585921+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-1c9ac2bdd353__minilm"}
+{"time_utc": "2026-11-14T21:12:30.431286+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-1c9ac2bdd353__minilm", "completed": 2, "status": "abstained", "generation_seconds": 20.84198599999945}
+{"time_utc": "2026-11-14T21:12:30.478097+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-dcd6fb096bd9__bm25"}
+{"time_utc": "2026-11-14T21:13:57.361755+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-dcd6fb096bd9__bm25", "completed": 3, "status": "malformed_output", "generation_seconds": 86.8621581250045}
+{"time_utc": "2026-11-14T21:13:57.510235+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-dcd6fb096bd9__minilm"}
+{"time_utc": "2026-11-14T21:14:47.807602+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-dcd6fb096bd9__minilm", "completed": 4, "status": "answered", "generation_seconds": 50.289365206001094}
+{"time_utc": "2026-11-14T21:14:47.949066+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-9db9beac80a9__bm25"}
+{"time_utc": "2026-11-14T21:15:11.436187+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-9db9beac80a9__bm25", "completed": 5, "status": "abstained", "generation_seconds": 23.475722602001042}
+{"time_utc": "2026-11-14T21:15:11.569379+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-9db9beac80a9__minilm"}
+{"time_utc": "2026-11-14T21:16:27.496749+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-9db9beac80a9__minilm", "completed": 6, "status": "malformed_output", "generation_seconds": 75.91043055699993}
+{"time_utc": "2026-11-14T21:16:27.677023+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-be519f64475f__bm25"}
+{"time_utc": "2026-11-14T21:17:09.251986+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-be519f64475f__bm25", "completed": 7, "status": "invalid_evidence_quote", "generation_seconds": 41.56492856700061}
+{"time_utc": "2026-11-14T21:17:09.349963+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-be519f64475f__minilm"}
+{"time_utc": "2026-11-14T21:18:21.779153+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-be519f64475f__minilm", "completed": 8, "status": "malformed_output", "generation_seconds": 72.41479565799818}
+{"time_utc": "2026-11-14T21:18:21.886206+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-36bbfce529b8__bm25"}
+{"time_utc": "2026-11-14T21:19:09.020622+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-36bbfce529b8__bm25", "completed": 9, "status": "answered", "generation_seconds": 47.12822360100108}
+{"time_utc": "2026-11-14T21:19:09.097156+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-36bbfce529b8__minilm"}
+{"time_utc": "2026-11-14T21:19:58.799998+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-36bbfce529b8__minilm", "completed": 10, "status": "invalid_evidence_quote", "generation_seconds": 49.689736222993815}
+{"time_utc": "2026-11-14T21:19:58.903980+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-5a7336ab968c__bm25"}
+{"time_utc": "2026-11-14T21:20:37.909794+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-5a7336ab968c__bm25", "completed": 11, "status": "answered", "generation_seconds": 39.0006507299986}
+{"time_utc": "2026-11-14T21:20:37.981384+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-5a7336ab968c__minilm"}
+{"time_utc": "2026-11-14T21:21:22.156922+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-5a7336ab968c__minilm", "completed": 12, "status": "answered", "generation_seconds": 44.161574783000106}
+{"time_utc": "2026-11-14T21:21:22.286308+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-b941678d80de__bm25"}
+{"time_utc": "2026-11-14T21:22:18.129933+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-b941678d80de__bm25", "completed": 13, "status": "invalid_evidence_quote", "generation_seconds": 55.91560943800141}
+{"time_utc": "2026-11-14T21:22:18.359055+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-b941678d80de__minilm"}
+{"time_utc": "2026-11-14T21:23:48.646544+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-b941678d80de__minilm", "completed": 14, "status": "malformed_output", "generation_seconds": 90.26810138099972}
+{"time_utc": "2026-11-14T21:23:48.822355+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-73e8e4e98534__bm25"}
+{"time_utc": "2026-11-14T21:24:12.654710+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-73e8e4e98534__bm25", "completed": 15, "status": "abstained", "generation_seconds": 23.82235395799944}
+{"time_utc": "2026-11-14T21:24:12.796051+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-73e8e4e98534__minilm"}
+{"time_utc": "2026-11-14T21:24:34.937489+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-73e8e4e98534__minilm", "completed": 16, "status": "abstained", "generation_seconds": 22.13688471000205}
+{"time_utc": "2026-11-14T21:24:35.061133+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-f0ba3e1e977e__bm25"}
+{"time_utc": "2026-11-14T21:25:29.612075+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-f0ba3e1e977e__bm25", "completed": 17, "status": "answered", "generation_seconds": 54.53540327999508}
+{"time_utc": "2026-11-14T21:25:29.746390+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-f0ba3e1e977e__minilm"}
+{"time_utc": "2026-11-14T21:26:17.449767+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-f0ba3e1e977e__minilm", "completed": 18, "status": "answered", "generation_seconds": 47.69716676600365}
+{"time_utc": "2026-11-14T21:26:17.573084+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-f2fa5cd76241__bm25"}
+{"time_utc": "2026-11-14T21:26:38.848818+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-f2fa5cd76241__bm25", "completed": 19, "status": "abstained", "generation_seconds": 21.273114319999877}
+{"time_utc": "2026-11-14T21:26:38.911547+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-f2fa5cd76241__minilm"}
+{"time_utc": "2026-11-14T21:28:06.016138+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-f2fa5cd76241__minilm", "completed": 20, "status": "malformed_output", "generation_seconds": 87.09078456200223}
+{"time_utc": "2026-11-14T21:28:06.208920+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-4609d6be9c7d__bm25"}
+{"time_utc": "2026-11-14T21:28:57.712313+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-4609d6be9c7d__bm25", "completed": 21, "status": "answered", "generation_seconds": 51.49241119699582}
+{"time_utc": "2026-11-14T21:28:57.857385+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-4609d6be9c7d__minilm"}
+{"time_utc": "2026-11-14T21:30:15.007398+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-4609d6be9c7d__minilm", "completed": 22, "status": "malformed_output", "generation_seconds": 77.14220738300355}
+{"time_utc": "2026-11-14T21:30:15.120865+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-c9e78deeb174__bm25"}
+{"time_utc": "2026-11-14T21:31:11.657537+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-c9e78deeb174__bm25", "completed": 23, "status": "answered", "generation_seconds": 56.526813021002454}
+{"time_utc": "2026-11-14T21:31:11.817597+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-c9e78deeb174__minilm"}
+{"time_utc": "2026-11-14T21:31:57.729829+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-c9e78deeb174__minilm", "completed": 24, "status": "answered", "generation_seconds": 45.86934081999789}
+{"time_utc": "2026-11-14T21:31:58.079477+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-210bd866a25c__bm25"}
+{"time_utc": "2026-11-14T21:32:58.958590+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-210bd866a25c__bm25", "completed": 25, "status": "answered", "generation_seconds": 60.873559555999236}
+{"time_utc": "2026-11-14T21:32:59.041103+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-210bd866a25c__minilm"}
+{"time_utc": "2026-11-14T21:33:49.018216+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-210bd866a25c__minilm", "completed": 26, "status": "answered", "generation_seconds": 49.9688182999962}
+{"time_utc": "2026-11-14T21:33:49.114062+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-4ecbcc440b1c__bm25"}
+{"time_utc": "2026-11-14T21:34:13.016116+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-4ecbcc440b1c__bm25", "completed": 27, "status": "abstained", "generation_seconds": 23.89608150099957}
+{"time_utc": "2026-11-14T21:34:13.111351+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-4ecbcc440b1c__minilm"}
+{"time_utc": "2026-11-14T21:35:26.389135+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-4ecbcc440b1c__minilm", "completed": 28, "status": "malformed_output", "generation_seconds": 73.27493454700016}
+{"time_utc": "2026-11-14T21:35:26.460230+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-4385aaa06495__bm25"}
+{"time_utc": "2026-11-14T21:36:45.245576+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-4385aaa06495__bm25", "completed": 29, "status": "malformed_output", "generation_seconds": 78.76474239399977}
+{"time_utc": "2026-11-14T21:36:45.372205+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-4385aaa06495__minilm"}
+{"time_utc": "2026-11-14T21:37:59.160087+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-4385aaa06495__minilm", "completed": 30, "status": "malformed_output", "generation_seconds": 73.76785139200365}
+{"time_utc": "2026-11-14T21:37:59.264454+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-5c7a593817d2__bm25"}
+{"time_utc": "2026-11-14T21:38:26.412616+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-5c7a593817d2__bm25", "completed": 31, "status": "abstained", "generation_seconds": 27.142712158994982}
+{"time_utc": "2026-11-14T21:38:26.500799+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-5c7a593817d2__minilm"}
+{"time_utc": "2026-11-14T21:38:49.959910+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-5c7a593817d2__minilm", "completed": 32, "status": "abstained", "generation_seconds": 23.454571392001526}
+{"time_utc": "2026-11-14T21:38:50.084078+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-f4ac028b6dd2__bm25"}
+{"time_utc": "2026-11-14T21:39:38.365937+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-f4ac028b6dd2__bm25", "completed": 33, "status": "answered", "generation_seconds": 48.26921923900227}
+{"time_utc": "2026-11-14T21:39:38.478181+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-f4ac028b6dd2__minilm"}
+{"time_utc": "2026-11-14T21:40:17.986441+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-f4ac028b6dd2__minilm", "completed": 34, "status": "invalid_evidence_quote", "generation_seconds": 39.50452165000024}
+{"time_utc": "2026-11-14T21:40:18.097545+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-f074b4c28745__bm25"}
+{"time_utc": "2026-11-14T21:41:45.394517+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-f074b4c28745__bm25", "completed": 35, "status": "malformed_output", "generation_seconds": 87.27591179300362}
+{"time_utc": "2026-11-14T21:41:45.496983+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-f074b4c28745__minilm"}
+{"time_utc": "2026-11-14T21:43:04.994443+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-f074b4c28745__minilm", "completed": 36, "status": "malformed_output", "generation_seconds": 79.48411597300583}
+{"time_utc": "2026-11-14T21:43:05.216084+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-071175958a7d__bm25"}
+{"time_utc": "2026-11-14T21:43:52.504703+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-071175958a7d__bm25", "completed": 37, "status": "answered", "generation_seconds": 47.281912931997795}
+{"time_utc": "2026-11-14T21:43:52.606253+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-071175958a7d__minilm"}
+{"time_utc": "2026-11-14T21:44:24.713678+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-071175958a7d__minilm", "completed": 38, "status": "malformed_output", "generation_seconds": 32.10292795499845}
+{"time_utc": "2026-11-14T21:44:24.802614+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-a9d1c7e47d92__bm25"}
+{"time_utc": "2026-11-14T21:45:40.380870+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-a9d1c7e47d92__bm25", "completed": 39, "status": "malformed_output", "generation_seconds": 75.56339571700664}
+{"time_utc": "2026-11-14T21:45:40.535907+00:00", "event": "generation_started", "pid": 46034, "pair_id": "qa-a9d1c7e47d92__minilm"}
+{"time_utc": "2026-11-14T21:46:51.961245+00:00", "event": "case_saved", "pid": 46034, "pair_id": "qa-a9d1c7e47d92__minilm", "completed": 40, "status": "invalid_evidence_quote", "generation_seconds": 71.40673076800158}
+{"time_utc": "2026-11-14T21:46:52.122841+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-01__bm25"}
+{"time_utc": "2026-11-14T21:47:12.165394+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-01__bm25", "completed": 41, "status": "abstained", "generation_seconds": 20.037948497003526}
+{"time_utc": "2026-11-14T21:47:12.243766+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-01__minilm"}
+{"time_utc": "2026-11-14T21:47:36.772328+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-01__minilm", "completed": 42, "status": "abstained", "generation_seconds": 24.521586946000753}
+{"time_utc": "2026-11-14T21:47:36.861225+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-02__bm25"}
+{"time_utc": "2026-11-14T21:47:56.863250+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-02__bm25", "completed": 43, "status": "abstained", "generation_seconds": 19.996545850000985}
+{"time_utc": "2026-11-14T21:47:56.962958+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-02__minilm"}
+{"time_utc": "2026-11-14T21:48:20.245085+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-02__minilm", "completed": 44, "status": "abstained", "generation_seconds": 23.2790720089979}
+{"time_utc": "2026-11-14T21:48:20.350481+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-03__bm25"}
+{"time_utc": "2026-11-14T21:48:40.947835+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-03__bm25", "completed": 45, "status": "abstained", "generation_seconds": 20.59141023599659}
+{"time_utc": "2026-11-14T21:48:41.036046+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-03__minilm"}
+{"time_utc": "2026-11-14T21:49:04.415807+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-03__minilm", "completed": 46, "status": "abstained", "generation_seconds": 23.37603302000207}
+{"time_utc": "2026-11-14T21:49:04.477152+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-04__bm25"}
+{"time_utc": "2026-11-14T22:15:51.754500+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-04__bm25", "completed": 47, "status": "abstained", "generation_seconds": 43.613216040001134}
+{"time_utc": "2026-11-14T22:15:51.880826+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-04__minilm"}
+{"time_utc": "2026-11-14T22:43:18.055110+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-04__minilm", "completed": 48, "status": "abstained", "generation_seconds": 31.06955857399589}
+{"time_utc": "2026-11-14T22:43:18.126331+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-05__bm25"}
+{"time_utc": "2026-11-14T23:06:41.701267+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-05__bm25", "completed": 49, "status": "abstained", "generation_seconds": 85.66490982699906}
+{"time_utc": "2026-11-14T23:06:41.878370+00:00", "event": "generation_started", "pid": 46034, "pair_id": "oos-05__minilm"}
+{"time_utc": "2026-11-14T23:07:09.648108+00:00", "event": "case_saved", "pid": 46034, "pair_id": "oos-05__minilm", "completed": 50, "status": "abstained", "generation_seconds": 27.766549119995034}
+{"time_utc": "2026-11-14T23:07:09.652706+00:00", "event": "session_completed", "pid": 46034, "completed": 50, "elapsed_seconds": 2455.0791651409963, "max_rss_bytes_macos": 6869200896}

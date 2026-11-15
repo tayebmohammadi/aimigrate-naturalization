@@ -1,0 +1,14 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "device": "cpu",
+  "chunk_tokens": 180,
+  "overlap_tokens": 40,
+  "cleaning_version": "feedback-and-volume-navigation-v1",
+  "bm25": {"k1": 1.5, "b": 0.75, "epsilon": 0.25},
+  "bm25_tokenization": "lowercase ASCII letters/digits, retaining internal hyphens; no stemming or stopwords",
+  "document_score": "maximum passage score",
+  "ties": "ascending document ID, then ascending passage ID; exact score ties only",
+  "recall_at_3": "fraction with linked source_doc_id in top 3 distinct documents",
+  "mrr": "mean 1/rank over all 57 distinct documents; 0 if linked document absent"
+}

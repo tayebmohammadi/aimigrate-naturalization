@@ -1,0 +1,146 @@
+Checkpoint audit: 0/50 matching records; 50 pending.
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.sse4_2'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx1_0'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx2_0'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.bmi1'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.bmi2'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512f'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512cd'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512dq'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512bw'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.avx512vl'. Detail: [errno 1] Operation not permitted
+HEARTBEAT 0/50 total=30.0s qa-1c9ac2bdd353__bm25 generation=9.9s
+SAVED 1/50 elapsed=50.8s qa-1c9ac2bdd353__bm25 abstained generation=30.65365526599635
+HEARTBEAT 1/50 total=60.0s qa-1c9ac2bdd353__minilm generation=8.5s
+SAVED 2/50 elapsed=72.4s qa-1c9ac2bdd353__minilm abstained generation=20.84198599999945
+HEARTBEAT 2/50 total=90.0s qa-dcd6fb096bd9__bm25 generation=17.6s
+HEARTBEAT 2/50 total=120.0s qa-dcd6fb096bd9__bm25 generation=47.6s
+HEARTBEAT 2/50 total=150.0s qa-dcd6fb096bd9__bm25 generation=77.6s
+SAVED 3/50 elapsed=159.3s qa-dcd6fb096bd9__bm25 malformed_output generation=86.8621581250045
+HEARTBEAT 3/50 total=180.0s qa-dcd6fb096bd9__minilm generation=20.5s
+SAVED 4/50 elapsed=209.8s qa-dcd6fb096bd9__minilm answered generation=50.289365206001094
+HEARTBEAT 4/50 total=210.0s qa-9db9beac80a9__bm25 generation=0.1s
+SAVED 5/50 elapsed=233.4s qa-9db9beac80a9__bm25 abstained generation=23.475722602001042
+HEARTBEAT 5/50 total=240.0s qa-9db9beac80a9__minilm generation=6.5s
+HEARTBEAT 5/50 total=270.0s qa-9db9beac80a9__minilm generation=36.5s
+HEARTBEAT 5/50 total=300.0s qa-9db9beac80a9__minilm generation=66.5s
+SAVED 6/50 elapsed=309.5s qa-9db9beac80a9__minilm malformed_output generation=75.91043055699993
+HEARTBEAT 6/50 total=330.0s qa-be519f64475f__bm25 generation=20.4s
+SAVED 7/50 elapsed=351.2s qa-be519f64475f__bm25 invalid_evidence_quote generation=41.56492856700061
+HEARTBEAT 7/50 total=360.0s qa-be519f64475f__minilm generation=8.7s
+HEARTBEAT 7/50 total=390.0s qa-be519f64475f__minilm generation=38.7s
+HEARTBEAT 7/50 total=420.0s qa-be519f64475f__minilm generation=68.7s
+SAVED 8/50 elapsed=423.7s qa-be519f64475f__minilm malformed_output generation=72.41479565799818
+HEARTBEAT 8/50 total=450.0s qa-36bbfce529b8__bm25 generation=26.2s
+SAVED 9/50 elapsed=471.0s qa-36bbfce529b8__bm25 answered generation=47.12822360100108
+HEARTBEAT 9/50 total=480.0s qa-36bbfce529b8__minilm generation=9.0s
+HEARTBEAT 9/50 total=510.0s qa-36bbfce529b8__minilm generation=39.0s
+SAVED 10/50 elapsed=520.8s qa-36bbfce529b8__minilm invalid_evidence_quote generation=49.689736222993815
+HEARTBEAT 10/50 total=540.0s qa-5a7336ab968c__bm25 generation=19.2s
+SAVED 11/50 elapsed=559.9s qa-5a7336ab968c__bm25 answered generation=39.0006507299986
+HEARTBEAT 11/50 total=570.0s qa-5a7336ab968c__minilm generation=10.1s
+HEARTBEAT 11/50 total=600.0s qa-5a7336ab968c__minilm generation=40.1s
+SAVED 12/50 elapsed=604.1s qa-5a7336ab968c__minilm answered generation=44.161574783000106
+HEARTBEAT 12/50 total=630.1s qa-b941678d80de__bm25 generation=25.8s
+HEARTBEAT 12/50 total=660.1s qa-b941678d80de__bm25 generation=55.8s
+SAVED 13/50 elapsed=660.2s qa-b941678d80de__bm25 invalid_evidence_quote generation=55.91560943800141
+HEARTBEAT 13/50 total=690.1s qa-b941678d80de__minilm generation=29.7s
+HEARTBEAT 13/50 total=720.1s qa-b941678d80de__minilm generation=59.7s
+HEARTBEAT 13/50 total=750.1s qa-b941678d80de__minilm generation=89.7s
+SAVED 14/50 elapsed=750.7s qa-b941678d80de__minilm malformed_output generation=90.26810138099972
+SAVED 15/50 elapsed=774.7s qa-73e8e4e98534__bm25 abstained generation=23.82235395799944
+HEARTBEAT 15/50 total=780.1s qa-73e8e4e98534__minilm generation=5.2s
+SAVED 16/50 elapsed=797.0s qa-73e8e4e98534__minilm abstained generation=22.13688471000205
+HEARTBEAT 16/50 total=810.1s qa-f0ba3e1e977e__bm25 generation=13.0s
+HEARTBEAT 16/50 total=840.1s qa-f0ba3e1e977e__bm25 generation=43.0s
+SAVED 17/50 elapsed=851.7s qa-f0ba3e1e977e__bm25 answered generation=54.53540327999508
+HEARTBEAT 17/50 total=870.1s qa-f0ba3e1e977e__minilm generation=18.3s
+SAVED 18/50 elapsed=899.5s qa-f0ba3e1e977e__minilm answered generation=47.69716676600365
+HEARTBEAT 18/50 total=900.1s qa-f2fa5cd76241__bm25 generation=0.5s
+SAVED 19/50 elapsed=920.9s qa-f2fa5cd76241__bm25 abstained generation=21.273114319999877
+HEARTBEAT 19/50 total=930.1s qa-f2fa5cd76241__minilm generation=9.2s
+HEARTBEAT 19/50 total=960.1s qa-f2fa5cd76241__minilm generation=39.2s
+HEARTBEAT 19/50 total=990.1s qa-f2fa5cd76241__minilm generation=69.2s
+SAVED 20/50 elapsed=1008.1s qa-f2fa5cd76241__minilm malformed_output generation=87.09078456200223
+HEARTBEAT 20/50 total=1020.1s qa-4609d6be9c7d__bm25 generation=11.9s
+HEARTBEAT 20/50 total=1050.2s qa-4609d6be9c7d__bm25 generation=41.9s
+SAVED 21/50 elapsed=1059.8s qa-4609d6be9c7d__bm25 answered generation=51.49241119699582
+HEARTBEAT 21/50 total=1080.2s qa-4609d6be9c7d__minilm generation=20.3s
+HEARTBEAT 21/50 total=1110.2s qa-4609d6be9c7d__minilm generation=50.3s
+SAVED 22/50 elapsed=1137.1s qa-4609d6be9c7d__minilm malformed_output generation=77.14220738300355
+HEARTBEAT 22/50 total=1140.2s qa-c9e78deeb174__bm25 generation=3.0s
+HEARTBEAT 22/50 total=1170.2s qa-c9e78deeb174__bm25 generation=33.0s
+SAVED 23/50 elapsed=1193.7s qa-c9e78deeb174__bm25 answered generation=56.526813021002454
+HEARTBEAT 23/50 total=1200.2s qa-c9e78deeb174__minilm generation=6.3s
+HEARTBEAT 23/50 total=1230.2s qa-c9e78deeb174__minilm generation=36.3s
+SAVED 24/50 elapsed=1239.8s qa-c9e78deeb174__minilm answered generation=45.86934081999789
+HEARTBEAT 24/50 total=1260.2s qa-210bd866a25c__bm25 generation=20.1s
+HEARTBEAT 24/50 total=1290.2s qa-210bd866a25c__bm25 generation=50.1s
+SAVED 25/50 elapsed=1301.0s qa-210bd866a25c__bm25 answered generation=60.873559555999236
+HEARTBEAT 25/50 total=1320.2s qa-210bd866a25c__minilm generation=19.1s
+HEARTBEAT 25/50 total=1350.2s qa-210bd866a25c__minilm generation=49.1s
+SAVED 26/50 elapsed=1351.1s qa-210bd866a25c__minilm answered generation=49.9688182999962
+SAVED 27/50 elapsed=1375.1s qa-4ecbcc440b1c__bm25 abstained generation=23.89608150099957
+HEARTBEAT 27/50 total=1380.2s qa-4ecbcc440b1c__minilm generation=5.0s
+HEARTBEAT 27/50 total=1410.2s qa-4ecbcc440b1c__minilm generation=35.0s
+HEARTBEAT 27/50 total=1440.2s qa-4ecbcc440b1c__minilm generation=65.0s
+SAVED 28/50 elapsed=1448.5s qa-4ecbcc440b1c__minilm malformed_output generation=73.27493454700016
+HEARTBEAT 28/50 total=1470.2s qa-4385aaa06495__bm25 generation=21.7s
+HEARTBEAT 28/50 total=1500.2s qa-4385aaa06495__bm25 generation=51.7s
+SAVED 29/50 elapsed=1527.3s qa-4385aaa06495__bm25 malformed_output generation=78.76474239399977
+HEARTBEAT 29/50 total=1530.2s qa-4385aaa06495__minilm generation=2.8s
+HEARTBEAT 29/50 total=1560.2s qa-4385aaa06495__minilm generation=32.8s
+HEARTBEAT 29/50 total=1590.2s qa-4385aaa06495__minilm generation=62.8s
+SAVED 30/50 elapsed=1601.2s qa-4385aaa06495__minilm malformed_output generation=73.76785139200365
+HEARTBEAT 30/50 total=1620.2s qa-5c7a593817d2__bm25 generation=18.9s
+SAVED 31/50 elapsed=1628.5s qa-5c7a593817d2__bm25 abstained generation=27.142712158994982
+HEARTBEAT 31/50 total=1650.2s qa-5c7a593817d2__minilm generation=21.7s
+SAVED 32/50 elapsed=1652.0s qa-5c7a593817d2__minilm abstained generation=23.454571392001526
+HEARTBEAT 32/50 total=1680.3s qa-f4ac028b6dd2__bm25 generation=28.1s
+SAVED 33/50 elapsed=1700.4s qa-f4ac028b6dd2__bm25 answered generation=48.26921923900227
+HEARTBEAT 33/50 total=1710.3s qa-f4ac028b6dd2__minilm generation=9.7s
+SAVED 34/50 elapsed=1740.0s qa-f4ac028b6dd2__minilm invalid_evidence_quote generation=39.50452165000024
+HEARTBEAT 34/50 total=1740.3s qa-f074b4c28745__bm25 generation=0.1s
+HEARTBEAT 34/50 total=1770.3s qa-f074b4c28745__bm25 generation=30.1s
+HEARTBEAT 34/50 total=1800.3s qa-f074b4c28745__bm25 generation=60.1s
+SAVED 35/50 elapsed=1827.5s qa-f074b4c28745__bm25 malformed_output generation=87.27591179300362
+HEARTBEAT 35/50 total=1830.3s qa-f074b4c28745__minilm generation=2.7s
+HEARTBEAT 35/50 total=1860.3s qa-f074b4c28745__minilm generation=32.7s
+HEARTBEAT 35/50 total=1890.3s qa-f074b4c28745__minilm generation=62.7s
+SAVED 36/50 elapsed=1907.1s qa-f074b4c28745__minilm malformed_output generation=79.48411597300583
+HEARTBEAT 36/50 total=1920.3s qa-071175958a7d__bm25 generation=13.0s
+HEARTBEAT 36/50 total=1950.3s qa-071175958a7d__bm25 generation=43.0s
+SAVED 37/50 elapsed=1954.6s qa-071175958a7d__bm25 answered generation=47.281912931997795
+HEARTBEAT 37/50 total=1980.3s qa-071175958a7d__minilm generation=25.6s
+SAVED 38/50 elapsed=1986.8s qa-071175958a7d__minilm malformed_output generation=32.10292795499845
+HEARTBEAT 38/50 total=2010.3s qa-a9d1c7e47d92__bm25 generation=23.4s
+HEARTBEAT 38/50 total=2040.3s qa-a9d1c7e47d92__bm25 generation=53.4s
+SAVED 39/50 elapsed=2062.4s qa-a9d1c7e47d92__bm25 malformed_output generation=75.56339571700664
+HEARTBEAT 39/50 total=2070.3s qa-a9d1c7e47d92__minilm generation=7.7s
+HEARTBEAT 39/50 total=2100.3s qa-a9d1c7e47d92__minilm generation=37.7s
+HEARTBEAT 39/50 total=2130.3s qa-a9d1c7e47d92__minilm generation=67.7s
+SAVED 40/50 elapsed=2134.0s qa-a9d1c7e47d92__minilm invalid_evidence_quote generation=71.40673076800158
+SAVED 41/50 elapsed=2154.2s oos-01__bm25 abstained generation=20.037948497003526
+HEARTBEAT 41/50 total=2160.3s oos-01__minilm generation=6.0s
+SAVED 42/50 elapsed=2178.8s oos-01__minilm abstained generation=24.521586946000753
+HEARTBEAT 42/50 total=2190.3s oos-02__bm25 generation=11.4s
+SAVED 43/50 elapsed=2198.9s oos-02__bm25 abstained generation=19.996545850000985
+HEARTBEAT 43/50 total=2220.3s oos-02__minilm generation=21.3s
+SAVED 44/50 elapsed=2222.3s oos-02__minilm abstained generation=23.2790720089979
+SAVED 45/50 elapsed=2243.0s oos-03__bm25 abstained generation=20.59141023599659
+HEARTBEAT 45/50 total=2250.3s oos-03__minilm generation=7.2s
+SAVED 46/50 elapsed=2266.5s oos-03__minilm abstained generation=23.37603302000207
+HEARTBEAT 46/50 total=2280.3s oos-04__bm25 generation=13.8s
+SAVED 47/50 elapsed=2310.2s oos-04__bm25 abstained generation=43.613216040001134
+HEARTBEAT 47/50 total=2310.3s oos-04__minilm generation=0.0s
+HEARTBEAT 47/50 total=2340.3s oos-04__minilm generation=30.0s
+SAVED 48/50 elapsed=2341.4s oos-04__minilm abstained generation=31.06955857399589
+HEARTBEAT 48/50 total=2370.3s oos-05__bm25 generation=28.9s
+HEARTBEAT 48/50 total=2400.4s oos-05__bm25 generation=59.0s
+SAVED 49/50 elapsed=2427.1s oos-05__bm25 abstained generation=85.66490982699906
+HEARTBEAT 49/50 total=2430.4s oos-05__minilm generation=3.1s
+SAVED 50/50 elapsed=2455.1s oos-05__minilm abstained generation=27.766549119995034
+COMPLETE: 50 immutable pair records; factual ratings remain pending.

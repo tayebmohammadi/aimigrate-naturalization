@@ -1,0 +1,114 @@
+{
+  "bm25": {
+    "in_scope": {
+      "N": 20,
+      "unnecessary_abstention": 5,
+      "malformed_output": 4,
+      "appropriate_abstention": 1,
+      "invalid_citation_or_quote": 2,
+      "supported_useful_answer": 7,
+      "partially_supported_answer": 1
+    },
+    "out_of_scope": {
+      "N": 5,
+      "appropriate_abstention": 5
+    },
+    "displayed_substantive_drafts_N": 8,
+    "rating_score_distributions": {
+      "factual_support_0_1_2": {
+        "0": 0,
+        "1": 1,
+        "2": 7
+      },
+      "citation_relevance_0_1_2": {
+        "0": 0,
+        "1": 0,
+        "2": 8
+      },
+      "addresses_question_0_1_2": {
+        "0": 0,
+        "1": 0,
+        "2": 8
+      },
+      "conditions_exceptions_0_1_2": {
+        "0": 0,
+        "1": 1,
+        "2": 7
+      },
+      "plain_english_0_1_2": {
+        "0": 0,
+        "1": 0,
+        "2": 8
+      }
+    },
+    "evidence_sufficiency_in_scope": {
+      "yes": 19,
+      "no": 1,
+      "uncertain": 0
+    }
+  },
+  "minilm": {
+    "in_scope": {
+      "N": 20,
+      "unnecessary_abstention": 3,
+      "supported_useful_answer": 3,
+      "malformed_output": 9,
+      "invalid_citation_or_quote": 3,
+      "partially_supported_answer": 1,
+      "incorrect_or_unsupported_answer": 1
+    },
+    "out_of_scope": {
+      "N": 5,
+      "appropriate_abstention": 5
+    },
+    "displayed_substantive_drafts_N": 5,
+    "rating_score_distributions": {
+      "factual_support_0_1_2": {
+        "0": 1,
+        "1": 1,
+        "2": 3
+      },
+      "citation_relevance_0_1_2": {
+        "0": 1,
+        "1": 1,
+        "2": 3
+      },
+      "addresses_question_0_1_2": {
+        "0": 1,
+        "1": 1,
+        "2": 3
+      },
+      "conditions_exceptions_0_1_2": {
+        "0": 1,
+        "1": 1,
+        "2": 3
+      },
+      "plain_english_0_1_2": {
+        "0": 0,
+        "1": 0,
+        "2": 5
+      }
+    },
+    "evidence_sufficiency_in_scope": {
+      "yes": 14,
+      "no": 5,
+      "uncertain": 1
+    }
+  },
+  "application_status_counts": {
+    "bm25": {
+      "abstained": 11,
+      "malformed_output": 4,
+      "invalid_evidence_quote": 2,
+      "answered": 8
+    },
+    "minilm": {
+      "abstained": 8,
+      "answered": 5,
+      "malformed_output": 9,
+      "invalid_evidence_quote": 3
+    }
+  },
+  "expected_response_pairs": 50,
+  "saved_response_pairs": 50
+}

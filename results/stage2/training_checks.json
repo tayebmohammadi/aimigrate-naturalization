@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "index_manifest_sha256": "d6552e33d570d81701f88fd39d6863790a99681ccae60ab0392a8a4dd9eecd22",
+  "protocol_sha256": "0145e57769c40678bd657420ba23407820ef211a56ba329cfc9941256a270399",
+  "training_file_sha256": "9200f0e0b62c4b7e7285d164c66fe5c09bbeb6cc71188541e7e1b20de306a96b",
+  "training_examples_sha256": "1d4c731dc5d079aedf036c98a387a780ffc2fbd887e112d074ac35e61267e2e8",
+  "check_code_sha256": "fa5b57d7a5ce5a58a9445def0199461f2585d1e9a0a2846e1166dcc4e50f8c9e",
+  "documents": 57,
+  "passages": 1696,
+  "embedding_shape": [
+    1696,
+    384
+  ],
+  "max_input_tokens": 182,
+  "checks": [
+    "source-only regeneration equals saved passages",
+    "all 57 document IDs retained",
+    "all passage text slices/titles/URLs match source-derived cleaned text",
+    "no QA answer/span fields in searchable passages",
+    "all passage inputs fit model",
+    "normalized finite embeddings",
+    "BM25 keeps negation/numbers/form identifiers",
+    "cleaning retains example conditions/negation",
+    "metric arithmetic and deterministic ties",
+    "too-long MiniLM question rejected",
+    "three training questions, both complete document rankings"
+  ]
+}

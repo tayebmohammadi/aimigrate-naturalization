@@ -1,0 +1,28 @@
+{
+  "stage2_result_hashes_match_original_protection_manifest": true,
+  "stage5_response_rows": 50,
+  "stage5_response_export_sha256": "6f9524477ce994c75e10bfe9174d9d56e8b53cc8913d07c2afdbf9f34a48cd6c",
+  "stage5_config_fingerprint_unchanged": "95a7d8e08286c0b3dfed33c12f74a8f0f5832a1aea9f43f45d81a1d2de77cb60",
+  "stage5_protected_paths_verified": 129,
+  "historical_files_resolved_from_archive": [
+    "data/index/manifest.json",
+    "results/stage5/fetch_current_sources.py",
+    "results/stage5/build_review.py",
+    "build_index.py",
+    "check_answers.py",
+    "answer.py",
+    "prepare_data.py",
+    "README.md",
+    "check_retrieval.py",
+    "download_data.py",
+    ".gitignore",
+    "retrieval.py",
+    "app.py",
+    "evaluate_retrieval.py",
+    "smoke_check.py"
+  ],
+  "snapshot_files_verified": 30,
+  "smoke_evidence_matches_working_passages": true,
+  "smoke_output": "results/stage6/app_flow_smoke.json",
+  "result": "passed"
+}

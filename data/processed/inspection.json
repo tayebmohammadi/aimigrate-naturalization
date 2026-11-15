@@ -1,0 +1,188 @@
+{
+  "corpus_documents": 10056,
+  "schemas": {
+    "corpus": "doc_id: string\nsource_name: string\nsource_type: string\nagency: string\njurisdiction: string\ntitle: string\nurl: string\ntext: string\nauthority_level: string\nlicense_note: string\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"doc_id\": {\"dtype\": \"string\", \"_type' + 480",
+    "train": "qa_id: string\nquestion: string\nanswer: string\nanswer_type: string\nextraction_type: string\nsource_doc_id: string\nsource_url: string\nsource_span: string\nauthority_level: string\ntopic_tags: list<element: string>\n  child 0, element: string\nimmigration_subtopic: string\ngeneration_mode: string\nreview_status: string\ntime_sensitive: bool\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"qa_id\": {\"dtype\": \"string\", \"_type\"' + 761",
+    "eval": "qa_id: string\nquestion: string\nanswer: string\nanswer_type: string\nextraction_type: string\nsource_doc_id: string\nsource_url: string\nsource_span: string\nauthority_level: string\ntopic_tags: list<element: string>\n  child 0, element: string\nimmigration_subtopic: string\ngeneration_mode: string\nreview_status: string\ntime_sensitive: bool\n-- schema metadata --\nhuggingface: '{\"info\": {\"features\": {\"qa_id\": {\"dtype\": \"string\", \"_type\"' + 761"
+  },
+  "splits": {
+    "train": {
+      "all_qa": 16065,
+      "unique_qa_ids": 16065,
+      "missing_source_ids_all_qa": 8371,
+      "naturalization_subtopic": 2514,
+      "naturalization_topic_tag": 3027,
+      "individual_checks_on_naturalization": {
+        "qa_authority": 1142,
+        "qa_hostname": 1030,
+        "linked_document": 1142,
+        "document_authority": 1142,
+        "document_hostname": 1030,
+        "url_agreement": 1142,
+        "exact_span": 485
+      },
+      "official_matching_span": 469,
+      "review_status_selected": {
+        "manual_review_required": 469
+      },
+      "null_counts": {
+        "qa_id": 0,
+        "question": 0,
+        "answer": 0,
+        "answer_type": 0,
+        "extraction_type": 0,
+        "source_doc_id": 0,
+        "source_url": 0,
+        "source_span": 0,
+        "authority_level": 0,
+        "topic_tags": 0,
+        "immigration_subtopic": 0,
+        "generation_mode": 0,
+        "review_status": 0,
+        "time_sensitive": 0,
+        "split": 0
+      }
+    },
+    "eval": {
+      "all_qa": 993,
+      "unique_qa_ids": 993,
+      "missing_source_ids_all_qa": 503,
+      "naturalization_subtopic": 156,
+      "naturalization_topic_tag": 193,
+      "individual_checks_on_naturalization": {
+        "qa_authority": 73,
+        "qa_hostname": 66,
+        "linked_document": 73,
+        "document_authority": 73,
+        "document_hostname": 66,
+        "url_agreement": 73,
+        "exact_span": 33
+      },
+      "official_matching_span": 31,
+      "review_status_selected": {
+        "manual_review_required": 31
+      },
+      "null_counts": {
+        "qa_id": 0,
+        "question": 0,
+        "answer": 0,
+        "answer_type": 0,
+        "extraction_type": 0,
+        "source_doc_id": 0,
+        "source_url": 0,
+        "source_span": 0,
+        "authority_level": 0,
+        "topic_tags": 0,
+        "immigration_subtopic": 0,
+        "generation_mode": 0,
+        "review_status": 0,
+        "time_sensitive": 0,
+        "split": 0
+      }
+    }
+  },
+  "associated_source_documents": 57,
+  "cross_split_duplicates": {
+    "all_qa": {
+      "question": {
+        "shared_unique_keys": 5,
+        "train_rows_with_shared_keys": 7,
+        "eval_rows_with_shared_keys": 5,
+        "within_train_extra_rows": 62,
+        "within_eval_extra_rows": 0
+      },
+      "qa_pair": {
+        "shared_unique_keys": 5,
+        "train_rows_with_shared_keys": 7,
+        "eval_rows_with_shared_keys": 5,
+        "within_train_extra_rows": 57,
+        "within_eval_extra_rows": 0
+      },
+      "qa_id": {
+        "shared_unique_keys": 0,
+        "train_rows_with_shared_keys": 0,
+        "eval_rows_with_shared_keys": 0,
+        "within_train_extra_rows": 0,
+        "within_eval_extra_rows": 0
+      }
+    },
+    "naturalization": {
+      "question": {
+        "shared_unique_keys": 0,
+        "train_rows_with_shared_keys": 0,
+        "eval_rows_with_shared_keys": 0,
+        "within_train_extra_rows": 7,
+        "within_eval_extra_rows": 0
+      },
+      "qa_pair": {
+        "shared_unique_keys": 0,
+        "train_rows_with_shared_keys": 0,
+        "eval_rows_with_shared_keys": 0,
+        "within_train_extra_rows": 7,
+        "within_eval_extra_rows": 0
+      },
+      "qa_id": {
+        "shared_unique_keys": 0,
+        "train_rows_with_shared_keys": 0,
+        "eval_rows_with_shared_keys": 0,
+        "within_train_extra_rows": 0,
+        "within_eval_extra_rows": 0
+      }
+    },
+    "official_subset": {
+      "question": {
+        "shared_unique_keys": 0,
+        "train_rows_with_shared_keys": 0,
+        "eval_rows_with_shared_keys": 0,
+        "within_train_extra_rows": 4,
+        "within_eval_extra_rows": 0
+      },
+      "qa_pair": {
+        "shared_unique_keys": 0,
+        "train_rows_with_shared_keys": 0,
+        "eval_rows_with_shared_keys": 0,
+        "within_train_extra_rows": 4,
+        "within_eval_extra_rows": 0
+      },
+      "qa_id": {
+        "shared_unique_keys": 0,
+        "train_rows_with_shared_keys": 0,
+        "eval_rows_with_shared_keys": 0,
+        "within_train_extra_rows": 0,
+        "within_eval_extra_rows": 0
+      }
+    }
+  },
+  "corpus_null_counts": {
+    "doc_id": 0,
+    "source_name": 0,
+    "source_type": 0,
+    "agency": 0,
+    "jurisdiction": 0,
+    "title": 0,
+    "url": 0,
+    "text": 0,
+    "authority_level": 0,
+    "license_note": 0
+  },
+  "examples": [
+    {
+      "qa_id": "qa-35797c99710e",
+      "question": "What immigration status or physical presence requirements must an alien meet at the time of enlistment, reenlistment, extension of service, or induction under INA 329?",
+      "title": "Chapter 3 - Military Service during Hostilities (INA 329)",
+      "url": "https://www.uscis.gov/policy-manual/volume-12-part-i-chapter-3"
+    },
+    {
+      "qa_id": "qa-2b240fd9fef3",
+      "question": "Can Form N-600 (Application for Certificate of Citizenship) be filed after a child turns 18 years of age?",
+      "title": "Chapter 2 - Certificate of Citizenship",
+      "url": "https://www.uscis.gov/policy-manual/volume-12-part-k-chapter-2"
+    },
+    {
+      "qa_id": "qa-ba219e79eb84",
+      "question": "What special provisions exist for military members who do not qualify for naturalization based on one year of military service?",
+      "title": "Chapter 6 - Jurisdiction, Place of Residence, and Early Filing",
+      "url": "https://www.uscis.gov/policy-manual/volume-12-part-d-chapter-6"
+    }
+  ]
+}

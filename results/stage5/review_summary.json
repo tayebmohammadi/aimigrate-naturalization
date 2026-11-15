@@ -1,0 +1,13 @@
+{
+  "selected": 20,
+  "snapshot_supported": 20,
+  "current_references_verified": 20,
+  "unique_current_pages": 16,
+  "unresolved_reference_ambiguities": 0,
+  "scope_qualified_references": 4,
+  "blocked_or_incomplete_current_rows": 0,
+  "relevant_substantive_differences_found": 0,
+  "student_independent_review_completed": false,
+  "new_generations": 0,
+  "selection_sha256": "e5ac1d7201b4a77d9feb2989eff2bc4e1bfd4505a3a5ea54103ec776e71d973e"
+}
