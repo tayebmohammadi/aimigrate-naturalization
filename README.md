@@ -1,6 +1,6 @@
 # AImigrate
 
-AImigrate is a local prototype for English naturalization questions. We search official USCIS passages with BM25 or MiniLM, then use a local Qwen model to draft a short answer with links to its evidence. It gives general information, not legal advice or an eligibility decision.
+AImigrate is a local prototype for English naturalization questions. We search official USCIS passages with BM25 or MiniLM, then use local Qwen to draft a short answer with source links. It gives general information, not legal advice.
 
 ## How it works
 
@@ -25,4 +25,4 @@ The current cache uses about 87 MB for MiniLM and 2.9 GB for Qwen; the environme
 
 We use revision `f25cc4476b6e45b20e3d0d3f6f7aeb50efb8dc6f` of the [USA Immigration Law Q&A dataset](https://huggingface.co/datasets/nshportun/usa-immigration-law-qa). Its card declares CC BY 4.0 for the compilation and separate terms for incorporated materials. Citation: nshportun (2026), *USA Immigration Law Q&A*, DOI [10.57967/hf/8824](https://doi.org/10.57967/hf/8824). Raw Parquet files are downloaded by setup and excluded from Git. The prepared subset has 57 USCIS documents and the index has 1,696 source-only passages. Dataset answers are generated, not manually verified. See the model cards for [MiniLM](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) and [Qwen](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct).
 
-Fixed retrieval results are in [results/stage2](results/stage2/RESULTS.md). The 50-response assessment is in [docs/EVALUATION.md](docs/EVALUATION.md), with evidence and raw outputs in `results/stage5/`. Source/model citations and the required assistance disclosure are in [docs/ASSISTANCE_DISCLOSURE.md](docs/ASSISTANCE_DISCLOSURE.md); setup and reproduction details are in [docs/REPRODUCE.md](docs/REPRODUCE.md). USCIS pages are a downloaded snapshot and may be out of date. The model can omit conditions, abstain, or fail validation.
+Fixed retrieval results are in [results/stage2](results/stage2/RESULTS.md). The 50-response assessment is in [docs/EVALUATION.md](docs/EVALUATION.md), with evidence and raw outputs in `results/stage5/`. Source/model citations and the required assistance disclosure are in [docs/ASSISTANCE_DISCLOSURE.md](docs/ASSISTANCE_DISCLOSURE.md); setup and reproduction details are in [docs/REPRODUCE.md](docs/REPRODUCE.md). The [USCIS capture redaction record](results/stage5/public_html_redaction/REDACTION.md) explains sanitized page copies. USCIS pages are a downloaded snapshot and may be out of date. The model can omit conditions, abstain, or fail validation.

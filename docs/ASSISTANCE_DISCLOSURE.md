@@ -75,3 +75,10 @@ packet’s explanatory text and pending-rating labels were updated; its evidence
 response records, saved ratings, and machine-readable reviewer fields were not
 rewritten. The retrieval code and working index fingerprint were not changed.
 Pre-edit hashes are in `results/writing_cleanup_baseline_2026-11-15.json`.
+
+On November 15, 2026, coding assistance traced a GitHub Google API key alert to
+39 downloaded USCIS HTML captures, verified the same setting on a current official
+page, preserved the originals privately, and prepared redacted public copies. It also
+updated the page-capture script and checked that extracted page text and links were
+unchanged. The credential owner and status were not verified; no API was called.
+The findings and per-file hashes are in `results/stage5/public_html_redaction/`.
