@@ -15,7 +15,7 @@ TRAIN_IDS = ["qa-555ef18e4ec5", "qa-2b240fd9fef3", "qa-35797c99710e"]
 def main():
     """Check the fixed retrievers and save three training-only evidence examples."""
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=ROOT / "results/stage2-reproduction")
+    parser.add_argument("--output", type=Path, default=ROOT / "results/retrieval-reproduction")
     results = parser.parse_args().output
     retriever = Retriever()
     sources = {d["doc_id"]: d for d in read_jsonl(SOURCES)}
@@ -82,7 +82,7 @@ def main():
     (results / "training_examples.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + '\n' for r in examples))
     (results / "training_examples.md").write_text('\n'.join(markdown))
     checks = {"passed": True, "index_manifest_sha256": sha256(INDEX / "manifest.json"),
-              "protocol_sha256": sha256(ROOT / "docs/STAGE2_PROTOCOL.md"),
+              "protocol_sha256": sha256(ROOT / "docs/RETRIEVAL_PROTOCOL.md"),
               "training_file_sha256": sha256(ROOT / "data/processed/official_qa_train.jsonl"),
               "training_examples_sha256": sha256(results / "training_examples.jsonl"),
               "check_code_sha256": sha256(ROOT / "scripts/check_retrieval.py"),

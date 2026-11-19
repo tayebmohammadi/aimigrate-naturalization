@@ -1,0 +1,9 @@
+# Answer assessment protocol
+
+We selected 20 of the 31 filtered held-out naturalization questions before collecting drafts. Python's `random.Random(72).sample` sampled from records sorted by question ID. We kept the sample order and added five [out-of-scope questions](out_of_scope.jsonl). The [selection manifest](selection_manifest.json) records the IDs and input hashes. The selected questions had no exact matches in the recorded generation development cases. Topics and source documents could overlap.
+
+Both pipelines answered the same 25 questions with the same Qwen model, prompt instructions, and [generation settings](frozen_configuration.json). Each pipeline supplied its own retrieved passages. Dataset reference answers, expected notes, and source-verification excerpts were kept out of the prompts. The [saved records](responses/) preserve the first attempts, exact inputs, raw and displayed outputs, and application statuses.
+
+The assisted assessment by OpenAI Codex checked whether each set of supplied passages could answer the question, then assessed the displayed draft against those passages and [verified USCIS material](../source-verification/FINAL_VERIFICATION.md). A supported useful draft answers the question, supports its material claims, uses relevant citations, and preserves essential conditions. The scoring dimensions were factual support, citation relevance, coverage, conditions and exceptions, and plain-English readability. Each used a 0–2 scale for substantive displayed drafts.
+
+The assessment distinguishes partial and incorrect drafts, appropriate and unnecessary declines, validation failures, and execution failures. Rejected raw text provides diagnostic evidence and does not count as a displayed answer. The denominator is 20 per method for naturalization questions and five per method for out-of-scope questions. See the [ratings and reasons](assessment/ratings.csv) and [reviewer metadata](assessment/assessment_metadata.json).

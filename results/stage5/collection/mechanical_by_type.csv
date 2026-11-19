@@ -1,5 +1,0 @@
-method,question_type,completed,in_scope,out_of_scope,parsed_answers,model_abstentions,validation_failures,execution_failures,mean_generation_seconds,median_generation_seconds,timing_n
-bm25,in_scope,20,20,0,8,6,6,0,49.065928969800005,47.77556608550003,20
-bm25,out_of_scope,5,0,5,0,5,0,0,37.98080609000026,20.59141023599659,5
-minilm,in_scope,20,20,0,5,3,12,0,56.323842301300466,50.12909175299865,20
-minilm,out_of_scope,5,0,5,0,5,0,0,26.00255993379833,24.521586946000753,5

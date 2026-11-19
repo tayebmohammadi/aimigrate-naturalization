@@ -1,28 +1,31 @@
-# AImigrate
+# AImigrate Naturalization Information Assistant
 
-AImigrate is a local prototype for English naturalization questions. We search official USCIS passages with BM25 or MiniLM, then use local Qwen to draft a short answer with source links. It gives general information, not legal advice.
+**Tayeb Mohammadi · CS 72/272**
 
-## How it works
+AImigrate helps immigrants and families read official U.S. naturalization information in plain English. Search a local collection of USCIS passages with BM25 keyword matching or MiniLM semantic search. The app shows three distinct sources, with a passage and a link for each. You can then ask local Qwen for a short cited draft. The collection is a saved snapshot, and drafts can make mistakes or omit conditions. Use the source links to check the current guidance.
 
-Enter a question and choose BM25 or MiniLM. The app ranks source passages, keeps the best passage from each of the top three distinct documents, and sends those passages with the question to Qwen. It shows the answer, evidence, and USCIS links. Retrieval scores and valid citations do not prove an answer is correct.
+## Run locally
 
-## Install and run
-
-Python 3.11 must already be installed. From the project folder, run:
+Install Python 3.11 and Bash. First-time setup needs internet and several GB of free space. From the repository folder, run:
 
 ```sh
 bash setup.sh
 bash run.sh
 ```
 
-First-time setup needs internet. It creates `.venv`, installs the pinned dependencies, downloads and checks the dataset, builds the index, and downloads MiniLM and Qwen. Later runs reuse valid data, index files, and the normal Hugging Face model cache. The setup and launch scripts use Bash. We tested them on an Intel Mac; Linux and Windows are untested.
+Open <http://127.0.0.1:8502>. Try the administrative naturalization ceremony example with either search method. Select **Generate answer from this evidence** to request a draft. On the tested Intel Mac, local generation took roughly a minute. See the [setup and reproduction guide](docs/REPRODUCE.md) for prerequisites, the recorded setup check, and retrieval commands.
 
-The app opens at <http://127.0.0.1:8502>. If that port is already in use, choose another with `AIMIGRATE_PORT=8503 bash run.sh`.
+## Data and methods
 
-The current cache uses about 87 MB for MiniLM and 2.9 GB for Qwen; the environment used about 1.4 GB on the test Mac. The 1.5B Qwen model ran on a 16 GB Intel Mac, but swap was already in use. CPU generations took about 65–73 seconds. Allow several GB of disk space and a minute or more per answer.
+We used the pinned [USA Immigration Law Q&A dataset](https://huggingface.co/datasets/nshportun/usa-immigration-law-qa) and indexed only source text from 57 USCIS documents, split into 1,696 passages. Setup downloads and verifies the raw dataset and builds the index. The [pinned dataset card](data/raw/README.md) documents the compilation license and the separate terms for incorporated materials. See the [retrieval protocol](docs/RETRIEVAL_PROTOCOL.md) and [answer assessment protocol](results/answers/ASSESSMENT_PROTOCOL.md) for the methods and settings.
 
-## Data and results
+## Results and evidence
 
-We use revision `f25cc4476b6e45b20e3d0d3f6f7aeb50efb8dc6f` of the [USA Immigration Law Q&A dataset](https://huggingface.co/datasets/nshportun/usa-immigration-law-qa). Its card declares CC BY 4.0 for the compilation and separate terms for incorporated materials. Citation: nshportun (2026), *USA Immigration Law Q&A*, DOI [10.57967/hf/8824](https://doi.org/10.57967/hf/8824). Raw Parquet files are downloaded by setup and excluded from Git. The prepared subset has 57 USCIS documents and the index has 1,696 source-only passages. Dataset answers are generated, not manually verified. See the model cards for [MiniLM](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) and [Qwen](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct).
+| Measure | BM25 | MiniLM |
+|---|---:|---:|
+| Linked source in the top three | 29/31 | 29/31 |
+| Mean reciprocal rank | 0.860 | 0.822 |
+| Supported, useful naturalization drafts with Qwen | 7/20 | 3/20 |
+| Appropriate declines on out-of-scope questions | 5/5 | 5/5 |
 
-Fixed retrieval results are in [results/stage2](results/stage2/RESULTS.md). The 50-response assessment is in [docs/EVALUATION.md](docs/EVALUATION.md), with evidence and raw outputs in `results/stage5/`. Source/model citations and the required assistance disclosure are in [docs/ASSISTANCE_DISCLOSURE.md](docs/ASSISTANCE_DISCLOSURE.md); setup and reproduction details are in [docs/REPRODUCE.md](docs/REPRODUCE.md). The [USCIS capture redaction record](results/stage5/public_html_redaction/REDACTION.md) explains sanitized page copies. USCIS pages are a downloaded snapshot and may be out of date. The model can omit conditions, abstain, or fail validation.
+The answer counts come from a separate assisted assessment of the saved outputs. See the [evaluation summary](docs/EVALUATION.md), [per-question retrieval ranks](results/retrieval/per_question.csv), [answer ratings and reasons](results/answers/assessment/ratings.csv), [saved answers and paired examples](results/answers/responses/), and [USCIS reference verification](results/source-verification/FINAL_VERIFICATION.md). The [assistance disclosure](docs/ASSISTANCE_DISCLOSURE.md) records the work performed with coding and review assistance.

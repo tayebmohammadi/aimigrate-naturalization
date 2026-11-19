@@ -11,13 +11,13 @@ from retrieval import INDEX, ROOT, Retriever, read_jsonl, sha256, source_metrics
 def main():
     """Score both frozen methods on the held-out questions and save document-rank results."""
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=ROOT / "results/stage2-reproduction")
-    parser.add_argument("--checks", type=Path, default=ROOT / "results/stage2-reproduction/training_checks.json")
+    parser.add_argument("--output", type=Path, default=ROOT / "results/retrieval-reproduction")
+    parser.add_argument("--checks", type=Path, default=ROOT / "results/retrieval-reproduction/training_checks.json")
     args = parser.parse_args()
     out = args.output
     checks_path = args.checks
     checks = json.loads(checks_path.read_text())
-    protocol_hash = sha256(ROOT / "docs/STAGE2_PROTOCOL.md")
+    protocol_hash = sha256(ROOT / "docs/RETRIEVAL_PROTOCOL.md")
     assert checks['passed'] and checks['protocol_sha256'] == protocol_hash
     assert checks['index_manifest_sha256'] == sha256(INDEX / "manifest.json"), "Rerun training checks for this index"
     retriever = Retriever()

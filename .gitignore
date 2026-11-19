@@ -14,6 +14,7 @@ credentials*
 data/raw/**/*.parquet
 /data/index/embeddings.npy
 /archive/development-history/
+/results/retrieval-reproduction/
 /results/stage2-reproduction/
 /results/stage4-reproduction/
 /results/stage4/
@@ -21,9 +22,8 @@ data/raw/**/*.parquet
 /results/cleanup_verification_2026-11-15/
 /results/writing_cleanup_baseline_2026-11-15.json
 /data/processed/inspection-output.txt
-/results/stage5/collection/batch.lock
-/results/stage5/collection/server_state.json
-/results/stage6/absolute_path_app_check.json
+/docs/FINAL_REPORT.md
+/docs/*.pdf
 /models/
 /checkpoints/
 *.safetensors
