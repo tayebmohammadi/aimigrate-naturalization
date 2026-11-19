@@ -11,4 +11,4 @@ For paired examples, compare the two records with the same question ID.
 | Civics test cutoff | [Record](records/qa-5c7a593817d2__bm25.json) | [Record](records/qa-5c7a593817d2__minilm.json) |
 | Oath history | [Record](records/qa-c9e78deeb174__bm25.json) | [Record](records/qa-c9e78deeb174__minilm.json) |
 
-The [assessment ratings](../assessment/ratings.csv) distinguish factual support from application acceptance. The saved records keep their original fields, paths, and fingerprints for provenance.
+The app records whether a draft passed its checks. OpenAI Codex separately scored how well the evidence supports it. See the [assessment ratings](../assessment/ratings.csv). The records retain their original fields, paths, and fingerprints.

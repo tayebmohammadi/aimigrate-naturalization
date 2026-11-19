@@ -1,8 +1,8 @@
 # Final verification of the 20 selected dataset references
 
-**Assistant reviewer:** OpenAI Codex (coding assistant). **Review date:** November 15, 2026 (America/New_York). This review checks whether each dataset reference answers its linked question against the linked USCIS page; it does not evaluate the 50 generated responses.
+We checked all 20 selected reference answers against their linked USCIS pages. The generated drafts have a [separate evaluation](../../docs/EVALUATION.md).
 
-We checked the 20 selected reference answers against their linked USCIS pages. For the separate verification recorded below, Codex inspected the relevant text and nearby conditions across 16 unique URLs captured on November 15, 2026. All 16 requests succeeded. The final assessment found 18 references supported as written and two requiring scope clarifications. The saved HTML copies are sanitized derivatives. The redaction removed a client-side configuration value and preserved the policy text and links.
+OpenAI Codex separately checked the relevant text and nearby conditions from 16 USCIS pages captured on November 15, 2026 (America/New_York). All 16 requests succeeded. Codex found support for 18 answers as written and identified two that needed scope clarifications. We removed a client-side configuration value from the saved HTML copies and kept the policy text and links intact.
 
 [Verification table](final_verification.csv) · [Access records](access_records.jsonl) · [USCIS captures](live_pages/)
 

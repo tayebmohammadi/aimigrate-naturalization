@@ -15,7 +15,7 @@ from retrieval import INDEX, ROOT, SOURCES, Retriever
 from answer import AnswerGenerator
 
 METHODS = {"BM25": "bm25", "MiniLM": "minilm"}
-# Actual development/training questions used for Stage 2 checks; no held-out QA.
+# The example questions come from the training split.
 EXAMPLES = [
     "Choose an example…",
     "What is the overall purpose of the administrative naturalization ceremony according to USCIS?",
@@ -54,7 +54,7 @@ def clear_search():
 
 
 def use_example():
-    """Copy a selected development example into the question box."""
+    """Copy the selected example into the question box."""
     selected = st.session_state["example"]
     if selected != EXAMPLES[0]:
         st.session_state["question"] = selected
@@ -80,7 +80,7 @@ def show_answer(result):
             st.markdown(f"**{source['citation_id']}** — [{source['title']}]({source['url']})")
     elif status == 'abstained':
         st.info(result['displayed_answer'])
-        st.caption("The model judged the supplied evidence insufficient. This is not a verified scope detector.")
+        st.caption("The model declined because it judged the supplied passages insufficient.")
     elif status == 'input_error':
         st.warning(result['error'])
     elif status in ('loading_error', 'generation_error'):
@@ -92,9 +92,8 @@ def show_answer(result):
         st.error(f"No accepted answer: {status.replace('_', ' ')}. "
                  "This is an output-validation failure, not an evidence-based abstention.")
         st.caption(result.get('validation_error', ''))
-    st.caption("Citation IDs and quote presence are checked, not factual support. Development checks "
-               "found incorrect answers even with valid citations. Inspect every claim against the "
-               "evidence; this is general information, not a personal eligibility decision.")
+    st.caption("The app checks citation IDs and looks for the quote in a cited passage. "
+               "Compare each claim with the source before relying on it. Use this draft for general information.")
     if result.get('evidence'):
         with st.expander("Evidence supplied for this answer"):
             for source in result['evidence']:
@@ -115,13 +114,12 @@ def main():
     st.write("Search a selected collection of 57 official USCIS naturalization source "
              "documents. Compare keyword search (BM25) with semantic search (MiniLM) "
              "and inspect the best matching passages.")
-    st.info("Course prototype for general information: source passages come from a downloaded "
-            "snapshot and have not yet been independently checked against current USCIS pages. "
-            "Generated answers are drafts; inspect the evidence and official sources.")
-    st.caption("Unrelated questions may still retrieve results. The local answer model is asked "
-               "to abstain when evidence is insufficient, but it can make mistakes.")
+    st.info("The app searches a saved copy of USCIS material. Policies can change. "
+            "Check the passages and official links before relying on a draft.")
+    st.caption("Search can return passages for unrelated questions. We ask Qwen to decline "
+               "when the passages give too little evidence. It can still make mistakes.")
 
-    st.selectbox("Try a development question", EXAMPLES, key="example", on_change=use_example)
+    st.selectbox("Try an example question", EXAMPLES, key="example", on_change=use_example)
     question = st.text_area("Your question", key="question", height=110,
                             placeholder="Type a naturalization question in English", on_change=clear_search)
     method_label = st.radio("Retrieval method", list(METHODS), index=0,
@@ -132,7 +130,7 @@ def main():
         clear_search()
         question = question.strip()
         if not question:
-            st.warning("Enter a question or choose a development example, then select Search.")
+            st.warning("Enter a question or choose an example, then select Search.")
         else:
             try:
                 retriever, lock = get_retriever(index_signature())

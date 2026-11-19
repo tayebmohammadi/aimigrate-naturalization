@@ -6,9 +6,9 @@ We preserved the dataset’s original splits and evaluated both methods on 31 he
 
 ## Draft answers
 
-We sampled 20 of the held-out questions and added five out-of-scope questions. Each question went through both retrieval methods with the same Qwen generator and instructions, producing 50 saved responses. We read all 50 in a manual review and did not record individual scores or notes. We separately checked the 20 selected dataset reference answers against their linked USCIS pages. The final Codex source verification found 18 supported as written and two with scope clarifications. [Reference verification](../results/source-verification/FINAL_VERIFICATION.md)
+We sampled 20 of the held-out questions and added five out-of-scope questions. Each question went through both retrieval methods with the same Qwen generator and instructions, producing 50 saved responses. We read all 50 saved responses. We did not record individual scores or notes during that review. We separately checked the 20 selected dataset reference answers against their linked USCIS pages. The final Codex source verification found 18 supported as written and two with scope clarifications. [Reference verification](../results/source-verification/FINAL_VERIFICATION.md)
 
-The table summarizes the separate assisted assessment by OpenAI Codex. The supported useful answers are a subset of the drafts accepted by the app. The app checks format, citation IDs, and quote presence. The assisted assessment checks support for the displayed claims.
+The table summarizes the separate assisted assessment by OpenAI Codex. The supported useful answers are a subset of the drafts accepted by the app. The app checks the response format, citation IDs, and whether the quote appears in a cited passage. Codex separately checked whether the evidence supported the displayed claims.
 
 | Selected outcomes | BM25 + Qwen | MiniLM + Qwen |
 |---|---:|---:|
@@ -20,4 +20,4 @@ The table summarizes the separate assisted assessment by OpenAI Codex. The suppo
 
 One BM25 decline on a naturalization question was appropriate. Both methods declined the same five out-of-scope questions. This small set gives limited evidence about questions near the boundary of the collection. [Assessment protocol](../results/answers/ASSESSMENT_PROTOCOL.md) · [Ratings and reasons](../results/answers/assessment/ratings.csv) · [Reviewer metadata](../results/answers/assessment/assessment_metadata.json)
 
-The [paired examples](../results/answers/responses/) include unsuccessful outputs. For the motion-to-reopen deadline, BM25 retrieved the 15-day rule, but the app rejected Qwen’s changed quote. MiniLM retrieved a passage without the rule, produced a raw 30-day answer, and hit the token limit. The app accepted neither draft. For the civics-test question, both methods retrieved the cutoff and Qwen still declined both times.
+The [paired examples](../results/answers/responses/) include unsuccessful outputs. For the motion-to-reopen deadline, BM25 retrieved the 15-day rule, but the app rejected Qwen’s changed quote. MiniLM retrieved a passage without the rule. Qwen wrote 30 days in its raw output and hit the token limit. The app showed a validation error for each and displayed neither as an answer. For the civics-test question, both methods retrieved the cutoff and Qwen still declined both times.

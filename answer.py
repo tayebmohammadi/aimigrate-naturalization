@@ -1,4 +1,4 @@
-"""Local Qwen answer generation and citation/schema checks for Stage 4. Run `python answer.py --smoke` after setup."""
+"""Generate local Qwen drafts and check citations and response format. Run `python answer.py --smoke` after setup."""
 import argparse
 import json
 import re
@@ -29,7 +29,7 @@ No explanations, markdown, or text outside the JSON."""
 
 
 def validate_response(raw, evidence, completed=True):
-    """Check output schema, references, and quote presence; not factual entailment."""
+    """Check the response format, citation IDs, and whether the quote appears in the cited text."""
     result = {"raw_response": raw, "displayed_answer": "", "citations": [],
               "supporting_quote": "", "status": "malformed_output", "validation_error": ""}
     if not completed:

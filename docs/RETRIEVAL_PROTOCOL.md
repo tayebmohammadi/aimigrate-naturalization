@@ -1,60 +1,21 @@
 # Retrieval protocol
 
-Collection: the 57 filtered USCIS source records. Neither QA answers
-nor QA source spans are inputs to passage creation. All 31 official evaluation
-questions are held out; use only selected training questions for implementation
-checks. Do not change these settings after observing held-out results.
+We built passages from the 57 filtered USCIS documents. We kept the dataset answers and labeled source excerpts out of passage creation. We used training questions for development checks and kept the settings fixed for the 31 held-out questions.
 
-The cached model `sentence-transformers/all-MiniLM-L6-v2`, revision
-`1110a243fdf4706b3f48f1d95db1a4f5529b4d41`, reports max_seq_length=256 and two
-special tokens. Use up to 180 content WordPiece tokens and approximately 40 tokens
-of overlap, adjusting boundaries to avoid splitting whitespace-delimited words.
-Check the token count of each actual substring again including special tokens;
-raise an error instead of silently truncating passages or long MiniLM questions.
-Titles remain metadata, not extra text prepended to embeddings. The source title
-already present in a document's original text remains part of that text.
+We used `sentence-transformers/all-MiniLM-L6-v2` at revision
+`1110a243fdf4706b3f48f1d95db1a4f5529b4d41`. It accepts up to 256 tokens including two special tokens. Passages have up to 180 WordPiece content tokens, with about 40 tokens of overlap. The index builder adjusts boundaries to keep words intact and checks token lengths again. MiniLM rejects questions above its limit. Titles are stored as metadata. A title already in the source text stays in that text.
 
-Cleaning removes the recognized “Was this page helpful?” feedback footer and
-contiguous blocks of at least three numbered USCIS Policy Manual volume-navigation
-links. Normalize whitespace but retain line/paragraph boundaries. Do not delete
-policy notes, appendices, footnotes, isolated citations, or short “Yes”/“No” lines
-that might be part of substantive conditions or tables. Exact duplicate passage
-text is removed only within a document. Identical passages in different documents
-keep their separate document IDs and provenance. Save an audit for each document.
-Remaining boilerplate and historical notes are an acknowledged conservative choice.
+The index builder removes the “Was this page helpful?” footer and navigation blocks of three or more USCIS Policy Manual volume links. It normalizes whitespace and keeps line and paragraph boundaries. It preserves policy notes, footnotes, citations, and short answers that may carry a condition. It removes exact duplicate passages within a document. Matching passages in different documents keep their separate IDs. The index builder records what it removes.
 
 Both methods search the identical saved passage collection:
 
-- BM25Okapi: k1=1.5, b=0.75, epsilon=0.25 (installed rank-bm25). Lowercase and
-  extract ASCII letter/digit tokens with internal hyphens; no stopword removal,
-  stemming, or synonym expansion. Keep numbers, form identifiers, and negation.
-- MiniLM: CPU, float32, normalized passage and question embeddings; dot products
-  are cosine similarities. Passage embeddings are built once and reused when
+- BM25Okapi: k1=1.5, b=0.75, epsilon=0.25 (installed rank-bm25). BM25 lowercases words and keeps ASCII letters, digits, and internal hyphens. It keeps numbers, form IDs, and words like “not.” It uses the tokens as written, without adding synonyms.
+- MiniLM: MiniLM runs on CPU with float32 values. It normalizes passage and question vectors so their dot product gives cosine similarity. Passage embeddings are built once and reused when
   source bytes, settings, pipeline code, and relevant package versions match.
-  Artifact hashes check passage/embedding alignment. Use the existing model cache.
+  The retriever checks hashes so it reads the matching passage and embedding files.
 
-Passages sort by descending score, then ascending document ID and passage ID for
-exact ties. A document's score is its maximum passage score. Rank distinct document
-IDs using the same order; retain the best passage as evidence. Scores are ranking
-values, not answer-confidence probabilities. No rejection threshold is fitted.
+The retriever sorts passages by score, highest first. It breaks exact ties by document ID and passage ID. Each document takes the score of its best passage, which also serves as its evidence. The score orders results. We set no score cutoff for rejecting a result.
 
-Recall@3 = fraction of questions whose linked source_doc_id is among the top three
-distinct documents. Full-collection MRR = mean of 1/rank of that linked source among
-all 57 distinct documents (zero if absent). There is one labeled relevant source
-per QA; other sources could still be relevant. Passage-level support is inspected
-separately; these source metrics do not verify an answer.
+Recall@3 is the share of questions where the linked source document is among the top three distinct results. For each question, reciprocal rank is one divided by the linked document’s rank among all 57 documents. It is zero if the document is absent. Mean reciprocal rank (MRR) averages these values across questions. The dataset links one source per question. Other sources may also be relevant.
 
-Development checks use the selected training questions about the overall purpose
-of the administrative ceremony, filing N-600 after age 18, and enlistment conditions
-under INA 329. The proposal's exact “What happens at a naturalization ceremony?”
-example is not in the selected training subset; use an actual ceremony QA instead.
-Save each method's top three distinct sources and full best passages, plus direct
-checks of provenance, token lengths, unit embeddings, metric arithmetic, and ties.
-Record this protocol and the successful training-check fingerprint before scoring.
-
-Then score the same 31 evaluation questions once for the initial comparison, with
-no tuning afterward. Save full document ranks, top evidence passages, per-question
-scores, summary metrics, and hashes of settings, protocol, code, index, and QA file.
-Later reruns reproduce the fixed experiment rather than selecting better settings.
-Training QA duplicates remain unchanged; there are no exact train/eval QA duplicates
-in this subset. Shared source documents are expected for this fixed-corpus task.
+We checked both methods on three training questions about the purpose of the administrative ceremony, filing N-600 after age 18, and enlistment under INA 329. The checks cover source links, token lengths, normalized vectors, rank calculations, and ties. We then scored the 31 held-out questions without changing the settings. The saved results include full document rankings, top passages, and per-question scores. We found no exact question–answer duplicates between the filtered splits. Both splits could link to the same documents.
